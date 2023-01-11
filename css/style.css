@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700');
+
+body,html{
+    background: #32254f;
+    background-image: url("../img/pattern.png");
+    height: 100%;
+}
+.ay{
+
+}
+.ay > .can{
+
+}
+
+.bugun{
+    font-family: 'Amatic SC', cursive !important;
+    font-weight: 700 !important;
+    color:#eac64f;
+    font-size:5.5vw !important;
+
+}
+
+.gun{
+    font-size:3vw;
+    margin-right: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.btn-aycan{
+
+    color: #fff;
+    background-color: #5d4d7b;
+    border-color: #0e0027;
+
+}
+@media only screen and (max-width: 600px) {
+    .bugun{
+
+        font-size:12vw !important;
+
+    }
+
+    .gun{
+        font-size:8vw;
+
+        font-weight: 300;
+    }
+}
