@@ -67,7 +67,7 @@ $interval = $tarih1->diff($tarih2);
                         ?>
                         </div>
                         <div class="col-md-12 col-md-12 d-flex align-items-center justify-content-center">
-                            <h3><span class="badge badge-warning"><?php echo $interval->y ==0 ? "":$interval->y ;?><?php echo $interval->m;?> AY <?php echo $interval->d;?> GÜN</span> </h3>
+                            <h3><span class="badge badge-warning"><?php echo $interval->y == 0 ? "":$interval->y." YIL " ;?> <?php echo $interval->m == 0 ? "":$interval->m." AY " ;?> <?php echo $interval->d;?> GÜN</span> </h3>
                       </div>
                     </div>
 
