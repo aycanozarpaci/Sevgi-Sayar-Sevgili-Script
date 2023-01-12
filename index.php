@@ -27,7 +27,7 @@ $interval = $tarih1->diff($tarih2);
             <div class="ay">
                     <div class="row p-0 m-0 h-100 text-white text-center ">
                         <div class="col-md-12 text-white text-center">
-                            <img src="img/love.svg" alt="" class="img-fluid" >
+                            <img src="img/love.svg" alt="" class="img-fluid aycan-img" >
                             <p class="lead" id="mesaj"><?php echo $kac_var['mi'] ?> Kişi Mutluluklar Diledi 😊 </p>
                             <form action="" method="post">
                                 <input type="text" hidden value="<?php echo $_SERVER["REMOTE_ADDR"] ?>" name="ip">

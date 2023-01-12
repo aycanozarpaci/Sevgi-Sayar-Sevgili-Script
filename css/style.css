@@ -35,11 +35,18 @@ body,html{
     border-color: #0e0027;
 
 }
+.aycan-img{
+    width: 25vw;
+}
+
 @media only screen and (max-width: 600px) {
     .bugun{
 
         font-size:12vw !important;
 
+    }
+    .aycan-img{
+        width: 50vw;
     }
 
     .gun{
@@ -47,4 +54,5 @@ body,html{
 
         font-weight: 300;
     }
+
 }
