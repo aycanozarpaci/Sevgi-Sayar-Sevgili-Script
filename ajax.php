@@ -2,7 +2,7 @@
 include_once "config.php";
 
 if($_GET['islem']=="ekle"){
-    $ip_a=$_POST['deger'];
+    $ip_a=htmlspecialchars($_POST['deger'], ENT_QUOTES);
     $tarih_db=date('Y-m-d H.i.s');
     $bir_mi = $db->query("SELECT count(mutluluk_ip) as sayac FROM mutluluk_dileyenler WHERE mutluluk_ip='$ip_a'")->fetch(PDO::FETCH_ASSOC);
     if($bir_mi['sayac'] >=1){
