@@ -46,7 +46,6 @@ $interval = $tarih1->diff($tarih2);
                             <img src="img/love.svg" alt="" class="img-fluid aycan-img" >
                             <p class="lead" id="mesaj"><?php echo $kac_var['mi'] ?> Kişi Mutluluklar Diledi 😊 </p>
                             <form action="" method="post">
-                                <input type="text" hidden value="<?php echo $_SERVER["REMOTE_ADDR"] ?>" name="ip">
                                 <button type="submit" name="mutluluk" id="dilekgonder" class="btn btn-aycan">Mutluluklar dile</button>
                             </form>
                         </div>
@@ -86,11 +85,9 @@ $interval = $tarih1->diff($tarih2);
  <script type="text/javascript">
      $("#dilekgonder").on("click", function (event) {
          event.preventDefault();
-         var data = $('input[name="ip"]').val();
          $.ajax({
              url: "ajax.php?islem=ekle",
              type: "POST",
-             data: "deger="+data,
              success: function (cevap) {
                  $('#mesaj').html( "<p class='lead'> Mutluluklar dileyen <span class='badge badge-danger'>" + cevap + "</span> . Kişisin 😍 <br> 🙈 Teşekkürler </p>");
              }

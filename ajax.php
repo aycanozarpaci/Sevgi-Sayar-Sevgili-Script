@@ -1,15 +1,11 @@
 <?php
 include_once "config.php";
 
-function check_ip($input) {
-    return filter_var($input, FILTER_VALIDATE_IP);
-}
-
 
 
 if($_GET['islem']=="ekle"){
-    if (check_ip($_POST['deger'])) {
-        $ip_a=htmlspecialchars($_POST['deger'], ENT_QUOTES);
+
+        $ip_a=$_SERVER['REMOTE_ADDR'];
         $tarih_db=date('Y-m-d H.i.s');
         $bir_mi = $db->query("SELECT count(mutluluk_ip) as sayac FROM mutluluk_dileyenler WHERE mutluluk_ip='$ip_a'")->fetch(PDO::FETCH_ASSOC);
         if($bir_mi['sayac'] >=1){
@@ -38,14 +34,7 @@ if($_GET['islem']=="ekle"){
             )</script>";
             }
         }
-    }
-    else {
-        echo "<script>swal(
-          '😉',
-          'Galiba bir şeyler ters gitti',
-          'error'
-        )</script>";
-    }
+
 }
 
 ?>
